@@ -1,3 +1,8 @@
 <app-container>
   <app-header />
+  @for (letter of alphabet.split(''); track letter) {
+  <app-separator>
+    {{ letter }}
+  </app-separator>
+  }
 </app-container>
