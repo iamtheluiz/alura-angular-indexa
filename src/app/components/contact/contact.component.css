@@ -2,7 +2,7 @@ section {
   display: flex;
   flex-direction: column;
 
-  padding: 24px 0px;
+  margin-bottom: 24px;
   gap: 16px;
 }
 section ul {
