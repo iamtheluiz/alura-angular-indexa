@@ -6,6 +6,7 @@ import { ContactComponent } from './components/contact/contact.component';
 import { FormsModule } from '@angular/forms';
 
 import agenda from './agenda.json';
+import { removeTextAccent } from './utils/removeTextAccent';
 
 interface Contact {
   id: number;
@@ -36,10 +37,10 @@ export class AppComponent {
       return this.contacts;
     }
 
-    return this.contacts.filter(contact => contact.name.toLowerCase().includes(this.textFilter.toLowerCase()));
+    return this.contacts.filter(contact => removeTextAccent(contact.name).toLowerCase().includes(removeTextAccent(this.textFilter).toLowerCase()));
   }
 
   filterContactsByFistLetter(letter: string): Contact[] {
-    return this.filterContactsByText().filter(contact => contact.name[0].toUpperCase() === letter.toUpperCase());
+    return this.filterContactsByText().filter(contact => removeTextAccent(contact.name)[0].toUpperCase() === letter.toUpperCase());
   }
 }
