@@ -1,0 +1,37 @@
+<app-container>
+  <header>
+    <section class="header-link">
+      <img src="assets/logo.png" alt="" />
+    </section>
+    <section class="header-contact">
+      <img src="assets/adicionar-contato.png" alt="" />
+      <h1>Adicionar contato</h1>
+    </section>
+  </header>
+
+  <form [formGroup]="contactForm">
+    <label for="name">Nome</label>
+    <input type="text" id="name" formControlName="name" placeholder="Digite o nome do contato" />
+    <label for="phone">Telefone</label>
+    <input type="text" id="phone" formControlName="phone" placeholder="Digite o telefone do contato" />
+    <label for="email">E-mail</label>
+    <input type="email" id="email" formControlName="email" placeholder="Digite o e-mail do contato" />
+
+    <app-separator />
+
+    <label for="birthday">Aniversário</label>
+    <input type="date" id="birthday" formControlName="birthday" placeholder="Data de nascimento" />
+    <label for="social">Redes sociais</label>
+    <div class="input-container">
+      <span class="span-http">http://</span>
+      <input type="url" id="social" formControlName="social" placeholder="Adicione a URL da página" />
+    </div>
+    <label for="name">Nome</label>
+    <textarea id="description" formControlName="description" placeholder="Coloque observações sobre o contato nesse espaço."></textarea>
+
+    <section class="buttons">
+      <button class="cancel-button" type="button">Cancelar</button>
+      <button class="save-button" type="submit">Salvar contato</button>
+    </section>
+  </form>
+</app-container>

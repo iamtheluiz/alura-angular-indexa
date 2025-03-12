@@ -7,6 +7,7 @@ import { FormsModule } from '@angular/forms';
 
 import agenda from './agenda.json';
 import { removeTextAccent } from './utils/removeTextAccent';
+import { ContactFormComponent } from "./pages/contact-form/contact-form.component";
 
 interface Contact {
   id: number;
@@ -21,8 +22,9 @@ interface Contact {
     HeaderComponent,
     SeparatorComponent,
     ContactComponent,
-    FormsModule
-  ],
+    FormsModule,
+    ContactFormComponent
+],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
