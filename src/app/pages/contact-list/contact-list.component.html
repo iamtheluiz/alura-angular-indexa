@@ -5,6 +5,14 @@
     type="search"
     placeholder="Digite para buscar"
   />
+
+  <section class="add-contact">
+    <button routerLink="/formulario">
+      <img src="assets/plus.png" alt="" />
+      <span>Adicionar contato</span>
+    </button>
+  </section>
+
   @for (letter of alphabet.split(''); track letter) {
   <app-separator>
     {{ letter }}

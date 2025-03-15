@@ -5,11 +5,16 @@ import { ContactFormComponent } from './pages/contact-form/contact-form.componen
 
 export const routes: Routes = [
   {
-    path: "",
+    path: 'lista-contatos',
     component: ContactListComponent
   },
   {
-    path: "novo",
+    path: 'formulario',
     component: ContactFormComponent
+  },
+  {
+    path: '',
+    redirectTo: '/lista-contatos',
+    pathMatch: 'full'
   }
 ];
